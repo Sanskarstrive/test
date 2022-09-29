@@ -11,12 +11,11 @@ function App() {
 
   // ** function uses two states to change the value
   const reverses = (data) => {
+    let value = 7;
+
     setNumber(
-      reversedNumber
+      value - data
     ); /* this updates the states with other number other than the displayed one*/
-    setReversedNumber(
-      data
-    ); /** this keeps the value of previos state to update again next time */
   };
 
   return (
