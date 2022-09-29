@@ -6,15 +6,24 @@ import { useCallback, useState } from "react";
 
 function App() {
   // ** states
+  const [numberNew, setNumberNew] = useState(3);
   const [number, setNumber] = useState(3);
+  const [reversedNumber, setReversedNumber] = useState(4);
+
+  // ** Easy solution to directly Swap
+  const reverse = (data) => {
+    let value = 7;
+    setNumberNew(value - data);
+  };
 
   // ** function uses two states to change the value
   const reverses = (data) => {
-    let value = 7;
-
     setNumber(
-      value - data
+      reversedNumber
     ); /* this updates the states with other number other than the displayed one*/
+    setReversedNumber(
+      data
+    ); /** this keeps the value of previos state to update again next time */
   };
 
   return (
@@ -25,6 +34,12 @@ function App() {
         style={{ padding: "0.5rem  2rem", color: "red", marginBottom: "2rem" }}
       >
         {number}
+      </button>
+      <button
+        onClick={() => reverse(numberNew)}
+        style={{ padding: "0.5rem  2rem", color: "red", marginBottom: "2rem" }}
+      >
+        {numberNew}
       </button>
 
       <Routes>
