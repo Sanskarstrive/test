@@ -7,7 +7,6 @@ import { useCallback, useState } from "react";
 function App() {
   // ** states
   const [number, setNumber] = useState(3);
-  const [reversedNumber, setReversedNumber] = useState(4);
 
   // ** function uses two states to change the value
   const reverses = (data) => {
