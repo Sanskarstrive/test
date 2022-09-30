@@ -31,7 +31,7 @@ function App() {
       <h1>Test Cases</h1>
       <button
         onClick={() => reverses(number)}
-        style={{ padding: "0.5rem  2rem", color: "red", marginBottom: "2rem" }}
+        style={{ padding: "0.5rem  2rem", color: "red", marginBottom: "2rem",marginRight:"2rem" }}
       >
         {number}
       </button>
